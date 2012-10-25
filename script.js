@@ -11,7 +11,8 @@ $(function(){
     next.className = temp;
   }
 
-  _el(".flip").on("click",function(){
+  _el(".flip").on("click",function(e){
+    e.preventDefault()
     _el('.tmp').html(_el('.current').html())
     swap_classes('active', 'inactive')
 
