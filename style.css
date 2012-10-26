@@ -1,3 +1,5 @@
+/*TODO: Convert to scss  (:*/
+
 body {
   background-image: url('bedge_grunge.png');
   font-size: 20px;
@@ -17,60 +19,65 @@ body {
   margin-top: -120px;
 }
 
-.info {
+.card .info {
   height: 220px;
-  background-color:white; 
+  background-color: #fff;
   text-align: center;
   padding-top: 1px;
 }
 
-.shadow {
+.card .info .ru {
+  display : inline;
+}
+.card .info .en {
+  display : none;
+}
+
+.card .info.flipped .ru {
+  display : none;
+}
+.card .info.flipped .en {
+  display : inline;
+}
+
+.card .info.shadow {
   -moz-box-shadow:    0 0 5px 2px rgba(0,0,0,.35);
   -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
   box-shadow:         0 0 5px 2px rgba(0,0,0,.35);
 }
 
-.menu {
+.card .menu {
   height: 20px;
   font-size: 0.6em;
 }
 
-.next {
-  display: none;
-}
-
-.name {
+.card .info .name {
   font-size: 1.5em;
+  margin-bottom: 0;
 }
 
-.position {
-  margin-top: -30px;
+.card .info .position {
+  margin-top: 0;
   font-size: 0.9em;
 }
 
-.field {
+.card .info .field {
   font-size: 0.8em;
 }
 
-.info a {
+.card .info  a {
   color: #444;
 }
 
-.info a:hover {
+.card .info a:hover {
   color: grey;
 }
 
-.inactive {
-  pointer-events: none;
+.card .menu a {
   cursor: default;
   text-decoration: none;
 }
-
-.active {
-  pointer-events: active;
+.card .menu a.next {
   cursor: pointer;
-}
-
-.tmp {
-  display: none;
+  text-decoration: underline;
 }
